@@ -1,0 +1,143 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<title>工业机器人拆装与调试</title>
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../videojs/video-js.min.css" rel="stylesheet" type="text/css">
+<link href="../css/common.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/common.js"></script><!--公共特效-->
+<script src="../video/swfobject.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+<!--引入头部-->
+<script src="../js/navhead2.js"></script>
+<!--<div class="top">
+    <div class="container">
+        <div class="row">
+            <div class="logo"><img src="../images/logo.png"></div>
+            <div class="nav">
+                <div class="visible-xs visible-sm visible-md phone-head">
+                    <div class="phone-nav">
+                        <img src="../images/nav_btn.png">
+                    </div>
+                </div>
+                <ul>
+                    <div class="hidden-xs hidden-sm hidden-md"><img src="../images/icon_robot.png"></div>
+                    <li><a href="../index.html"><img class="hidden-xs" src="../images/nav01.png"><h6>首  页</h6></a></li>
+                    <li><a href="../kcjj.html"><img class="hidden-xs" src="../images/nav02.png"><h6>课程简介</h6></a></li>
+                    <li><a href="../kcxx.html"><img class="hidden-xs" src="../images/nav03.png"><h6>课程学习</h6></a></li>
+                    <li><a href="../test/test01.html"><img class="hidden-xs" src="../images/nav04.png"><h6>模拟考试</h6></a></li>
+                    <li><a href="../data/data01.html"><img class="hidden-xs" src="../images/nav05.png"><h6>拓展资源</h6></a></li>
+                    <img class="g-navl" src="../images/g_navl.png">
+                    <img class="g-navr" src="../images/g_navr.png">
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>-->
+<script>
+<!--菜单显示当前-->
+$(function(){
+	$(".nav ul li").eq(2).find("a").addClass("nav-on");
+})		   
+</script>
+<div class="box">
+	<div class="container">
+    	<div class="row">
+            <div class="col-lg-10 col-xs-12 fr">
+            	<div class="col-xs-12 col-sm-11">
+                    <div class=" content">
+                        <div class="place">
+                            <p class="fl">课程学习</p>
+                            <div class="fr">当前位置：<a href="../index.html">首页</a> - <a href="../kcxx.html">课程学习</a> - 第一章 机器人拆装基础知识介绍</div>
+                        </div>
+                        <!--课程学习内容-->
+                        
+            <div class="wrap content no-border">
+                <h4 class="twotitle">★ 1.1 工业机器人常用传动机构及工作原理</h4>
+                <h6 class="threetitle">◆ 1.1.4 机械传动之螺旋传动</h6>
+                <div class="content-tab tab02"><a class="active" id="tab1" onClick="setTab('tab',1,2)">螺旋传动简介</a><a id="tab2" onClick="setTab('tab',2,2)">螺旋传动移动方向的判定 </a></div>
+                <div id="content1">
+                    <script>
+                        var swfVersionStr = "11.6.0";
+                        var xiSwfUrlStr = "playerProductInstall.swf";
+                        var flashvars = {};
+                        flashvars.autostart = 1;            //自动开始播放
+                        flashvars.autohide = 1;             //控制条自动隐藏
+                        flashvars.uid = "12138";            //密码
+                        flashvars.enable_progress = 1;      //是否能拖动
+                        flashvars.url = "../video/1_1_4.flv";                 //视频地址，只支持加密后的flv
+                        
+                        var params = {};
+                        params.quality = "high";
+                        params.bgcolor = "#000000";
+                        params.allowscriptaccess = "always";
+                        params.allowfullscreen = "true";
+                        var attributes = {};
+                        attributes.id = "SparrowPlayer";
+                        attributes.name = "SparrowPlayer";
+                        attributes.align = "middle";
+                        swfobject.embedSWF(
+                            "../video/p.swf", "flashContent1", 
+                             "100%", "442",  
+                            swfVersionStr, xiSwfUrlStr, 
+                            flashvars, params, attributes);
+                        swfobject.createCSS("#flashContent1", "display:block;text-align:center;");
+                    </script>
+                    <div id="flashContent1" class="viewBox"></div>
+                </div>
+                <div id="content2">
+                    <p>大多数情况下，螺旋传动用于把旋转运动转换成直线运动，那么直线移动的方向该如何判定呢？</p>
+                    <p><strong>1.普通螺旋传动</strong></p>
+                    <p>由单个螺杆和螺母组成的简单螺旋副实现的传动称为普通螺旋传动。根据不同的机构形式，有两种情况：一是螺杆（或螺母）既做主动回转运动，又做直线移动；二是螺杆（或螺母）做主动回转运动，螺母（或螺杆）做直线移动。</p>
+                    <p>在普通螺旋传动中，关于主动件或从动件的直线移动方向判定问题，我们可以简单归纳为三个步骤。</p>
+                    <p>1.判断旋向。沿着轴线的方向观察，螺纹左边高的为左旋螺纹，螺纹右边高的为右旋螺纹。如图1所示。需要注意的是，相互旋合的内、外螺纹的旋向必定是一致的。</p>
+                    <img src="images/1.jpg">
+                    <p class="center">图1 螺纹旋向的判定</p>
+                    <p>2.在已知螺纹旋向的情况下，若判断对象为左旋螺纹副则拿出左手，若判断对象为右旋螺纹副则拿出右手。手握空拳，竖起大拇指，摆出如图1中所示的手势。最后四指指向主动件回转方向。</p>
+                    <p>3.若螺杆在轴线方向上不能移动，而螺母可以移动。则按步骤二摆出的手势的大拇指指向的反方向为螺母移动的方向。若螺母是完全固定的，而螺杆在轴线方向上可以移动，那么大拇指指向则为其直线移动方向。（螺母和螺杆可以理解为两个具有相对运动趋势的物体）</p>
+                    <p>如图2所示，螺杆按图示方向旋转的时候，根据普通螺纹直线移动方向判定的三个步骤可知：主动件螺杆的移动趋势为向右，从动件螺母的移动趋势向左。</p>
+                    <img src="images/2.jpg">
+                    <p class="center">图2 普通螺纹直线移动方向判定</p>
+                    <p>若该螺旋机构螺纹导程（螺距和螺纹头数的乘积）为l，且螺母轴向可移动，螺杆不行。当螺杆按图示方向转过角度ϕ，螺母将沿螺杆轴向左移动一段距离：</p>
+                    <p>S=lϕ/（2π）</p>
+                    <p><strong>2.差动螺旋机构和复式螺旋机构</strong></p>
+                    <p>差动螺旋机构和复式螺旋结构均是由两个简单的普通螺旋机构复合而成不同的是组成差动螺旋机构的两个普通螺旋机构的螺纹旋向相同，而组成复式螺旋机构的两个普通螺旋机构的螺纹旋向相反。下图变为典型的差动螺旋机构和复试螺旋机构。</p>
+                    <img src="images/3.jpg">
+                    <p class="center">图3 车床进给螺旋机构（复式螺旋机构）</p>
+                    <img src="images/4.jpg">
+                    <p class="center">图4 千分尺用螺旋机构（差动螺旋机构）</p>
+                    <p>判断差动螺旋机构和复式螺旋机构的移动件移动方向和距离的方法和普通螺旋机构基本一致，只是多了一个叠加或相减的过程，这里不再赘述。希望同学们课下通过计算判断它们移动件的移动方向和距离，思考差动螺旋机构和复式螺旋机构的功能区别和应用领域区别。</p>
+                </div>
+            </div>
+                    </div>
+            <div id="front_back">
+                <span class="left_front"><a href="../1_1_3/1_1_3.html">◀ 上一节</a></span>
+                <span class="right_back"><a href="../1_1_5/1_1_5.html">下一节 ▶</a></span>
+            </div>
+                </div>
+                <div class="col-sm-1">
+                    <!--引用树数据-->
+                    <script src="../js/tree.js"></script>
+                      <!--tree end-->
+                </div>
+            </div>
+        </div>  <!--row  end-->
+    </div>  <!--container end-->
+</div>      <!--box end-->            
+<!--底部-->
+<script src="../js/foot.js"></script>     
+</body>
+</html>

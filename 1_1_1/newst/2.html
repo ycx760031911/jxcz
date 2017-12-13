@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<title>单选题</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/jstorage.js"></script>
+<script src="kctest.js"></script>
+<link href="css/style.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="../js/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+var id = 2;
+var right = "A";
+var nextpage = "3.html";
+var flag="";
+$(document).ready(function(){
+   $("#kclist").html(kclist);
+   $("img").each(function(){
+		$(this).attr("class","img-responsive");
+   })
+   var myanswer = $.jStorage.get(testid+"answer"+id);
+   if(myanswer!=null){
+	   setval(myanswer);
+	   showda();
+	   if(nextpage!=""){
+	   $("#np").show();
+	   $("#tj").hide();
+	   }
+	   else{
+	   $("#tj").hide();  
+		}
+	}
+});
+</script>
+<script src="js/common.js"></script>
+</head>
+
+<body>
+<div class="container mnst_main">
+    <div class="row"><h1>随堂测试</h1></div>
+    <div class="row nav">
+      <div class="tx">单选题</div>
+      <div class="num">2 of 3　<span class="glyphicon glyphicon-hand-left"></span></div>
+    </div>
+    <div class="row st_content">
+        <label for="name">2．基础工程的重要性不是体现在（ ）</label>
+        <div class="radio">
+            <label>
+              <input type="radio" name="danx" id="danx1" value="A">A．是非常挣钱的工程</label>
+            <div class="daan" style="display:none;"><span class="glyphicon glyphicon-ok"></span></div>
+        </div>
+        <div class="radio">
+            <label>
+              <input type="radio" name="danx" id="danx2" value="B">B．是隐蔽工程</label>
+        </div>
+        <div class="radio">
+            <label>
+              <input type="radio" name="danx" id="danx3" value="C">C．对建设工程的进度起控制作用</label>
+        </div>
+        <div class="radio">
+            <label>
+              <input type="radio" name="danx" id="danx4" value="D">D．造价占比高</label>
+        </div>
+
+        <div class="alert alert-success" style="display:none;" id="notice">警告！请不要提交。</div>
+        <div class="mnst_button">
+        <a href="3.html" class="btn btn-default" id="np" style="display:none;"><span class="glyphicon glyphicon-chevron-right"></span> 下一题</a><button type="button" class="btn btn-default" onClick="danxtj();" id="tj"><span class="glyphicon glyphicon-share"></span> 提交</button>　<a href="stlist.html" class="btn btn-default"><span class="glyphicon glyphicon-list"></span> 试题列表</a>
+        </div>
+   </div>
+</div>
+
+<div class="modelbox">
+<!-- 提交模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"  aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <p class="modal-title" id="myModalLabel">
+               提示
+            </p>
+         </div>
+         <div class="modal-body">
+            <p id="mt1">在提交之前，你必须完成问题。</p>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" 
+               data-dismiss="modal">ok
+            </button>
+         </div>
+      </div><!-- /.modal-content -->
+</div>
+</div>
+<!-- /.modal -->
+<!-- 试题列表模态框（Modal） -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog"  aria-labelledby="myModalLabel2" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <p class="modal-title" id="myModalLabel2">
+               试题列表
+            </p>
+         </div>
+         <div class="modal-body">
+           <ul id="kclist">
+           </ul>
+         </div>
+         <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+</div>
+</div>
+<!-- /.modal -->
+</div>
+</body>
+</html>
+

@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<title>工业机器人拆装与调试</title>
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/common.css" rel="stylesheet">
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/common.js"></script><!--公共特效-->
+
+<script>
+function iframeFitHeight(oIframe) 
+{//Iframe窗口自适应高度 兼容IE6.0 FF2.0以上 
+    try 
+    { 
+        var oWin = oIframe.name ? window.frames[oIframe.name] : oIframe.contentWindow;  
+        oIframe.style.height = oWin.document.body.scrollHeight + "px"; 
+    } 
+    catch(e){} 
+} 
+
+/*内容区生成iframe*/
+function mIframe(url){
+	$("#resText").html("<br><iframe src='"+ url +"' onload='iframeFitHeight(this)' frameborder=0 style='width:100%; height:550px;'></iframe>");
+}
+$(document).ready(function(){
+	mIframe("test1/test.html");
+
+})
+</script>
+</head>
+
+<body>
+<!--引入头部-->
+<script src="../js/navhead2.js"></script>
+<!--<div class="top">
+    <div class="container">
+        <div class="row">
+            <div class="logo"><img src="../images/logo.png"></div>
+            <div class="nav">
+                <div class="visible-xs visible-sm visible-md phone-head">
+                    <div class="phone-nav">
+                        <img src="../images/nav_btn.png">
+                    </div>
+                </div>
+                <ul>
+                    <div class="hidden-xs hidden-sm hidden-md"><img src="../images/icon_robot.png"></div>
+                    <li><a href="../index.html"><img class="hidden-xs" src="../images/nav01.png"><h6>首  页</h6></a></li>
+                    <li><a href="../kcjj.html"><img class="hidden-xs" src="../images/nav02.png"><h6>课程简介</h6></a></li>
+                    <li><a href="../kcxx.html"><img class="hidden-xs" src="../images/nav03.png"><h6>课程学习</h6></a></li>
+                    <li><a href="../test/test01.html"><img class="hidden-xs" src="../images/nav04.png"><h6>模拟考试</h6></a></li>
+                    <li><a href="../data/data01.html"><img class="hidden-xs" src="../images/nav05.png"><h6>拓展资源</h6></a></li>
+                    <img class="g-navl" src="../images/g_navl.png">
+                    <img class="g-navr" src="../images/g_navr.png">
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>-->
+<script>
+<!--菜单显示当前-->
+$(function(){
+	$(".nav ul li").eq(4).find("a").addClass("nav-on");
+})		   
+</script>
+<div class="box">
+	<div class="container">
+    	<div class="row">
+            <div class="col-xs-12 col-lg-10 fr">
+            	<div class="content">
+                    <div class="place">
+                        <p class="fl">拓展资源</p>
+                        <div class="fr">当前位置：<a href="../index.html">首页</a> - <a href="../data/data01.html">拓展资源</a></div>
+                    </div>
+                    <div class="wrap">
+                    	<!--手机端按钮-->
+                    	<div class="col-xs-12 visible-xs">
+                    		<ul class="testphone-right">
+                    			<li class="col-xs-4"><a href="data01.html"><img src="../images/data01_on.png"><h1>参考文献</h1></a></li>
+                    			<li class="col-xs-4"><a href="data02.html"><img src="../images/data02.png"><h1>图片动画</h1></a></li>
+                    			<li class="col-xs-4"><a href="data03.html"><img src="../images/data03.png"><h1>深入学习</h1></a></li>
+                    		</ul>
+                    	</div>
+                    	<!--资源内容-->
+                    	<div class="col-sm-10 col-xs-12">
+                            <div class="wrap content no-border border">
+                    		<h3>参考文献</h3>
+                            <p>[1] 徐灏.机械设计手册[M].北京:机械工业出版社,1995.</p>
+                            <p>[2] 逯萍.钳工工艺学[M].北京:机械工业出版社,2008.</p>
+                            <p>[3] 技工学校机械类通用教材编审委员会.电工工艺学[M].北京:机械工业出版社,2012.</p>
+                            <p>[4] 龚奇平.液压与气动[M].北京:机械工业出版社,2012.</p>
+                            <p>[5] 王先逵.机械装配工艺[M].北京:机械工业出版社,2008.</p>
+                            <p>[6] 隋冬杰,谢亚青.机械基础[M].上海:复旦大学出版社,2010.</p>
+                            <p>[7] 周真，苑惠娟.传感器原理与应用[M].北京:清华大学出版社,2015.</p>
+                           </div>
+                    	</div>
+                    	<!--pc端按钮-->
+                    	<div class="col-sm-2 hidden-xs">
+                    		<ul class="test-right">
+                    			<li><a href="data01.html"><img src="../images/data01_on.png"><h1>参考文献</h1></a></li>
+                    			<li><a href="data02.html"><img src="../images/data02.png"><h1>图片动画</h1></a></li>
+                    			<li><a href="data03.html"><img src="../images/data03.png"><h1>深入学习</h1></a></li>
+                    		</ul>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+        </div>  <!--row  end-->
+    </div>  <!--container end-->
+</div>      <!--box end-->     
+<!--底部-->
+<script src="../js/foot.js"></script>         
+</body>
+</html>
